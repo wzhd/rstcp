@@ -13,6 +13,8 @@ mod ethernet;
 #[cfg(feature = "ethernet")]
 pub use self::neighbor::Neighbor as Neighbor;
 #[cfg(feature = "ethernet")]
+pub use self::ethernet::IpPacket;
+#[cfg(feature = "ethernet")]
 pub(crate) use self::neighbor::Answer as NeighborAnswer;
 #[cfg(feature = "ethernet")]
 pub use self::neighbor::Cache as NeighborCache;

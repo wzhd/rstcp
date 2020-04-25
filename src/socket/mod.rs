@@ -61,7 +61,7 @@ pub(crate) use self::ref_::Session as SocketSession;
 
 /// Gives an indication on the next time the socket should be polled.
 #[derive(Debug, PartialOrd, Ord, PartialEq, Eq, Clone, Copy)]
-pub(crate) enum PollAt {
+pub enum PollAt {
     /// The socket needs to be polled immidiately.
     Now,
     /// The socket needs to be polled at given [Instant][struct.Instant].

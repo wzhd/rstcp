@@ -258,7 +258,7 @@ impl<'a, DeviceT> InterfaceBuilder<'a, DeviceT>
 }
 
 #[derive(Debug, PartialEq)]
-enum EthernetPacket<'a> {
+pub enum EthernetPacket<'a> {
     #[cfg(feature = "proto-ipv4")]
     Arp(ArpRepr),
     Ip(IpPacket<'a>),
@@ -266,7 +266,7 @@ enum EthernetPacket<'a> {
 
 
 #[derive(Debug, PartialEq)]
-pub(crate) enum IpPacket<'a> {
+pub enum IpPacket<'a> {
     #[cfg(feature = "proto-ipv4")]
     Icmpv4((Ipv4Repr, Icmpv4Repr<'a>)),
     #[cfg(feature = "proto-igmp")]
